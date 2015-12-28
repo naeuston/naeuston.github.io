@@ -1,0 +1,134 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<title>NA Euston- shares</title>
+	<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+
+	<script type='text/javascript' src='mp3player/swfobject.js'></script>
+	<script type='text/javascript'>
+	function play(file_name)
+	{
+		var s1 = new SWFObject('mp3player/player.swf','player','475','400','9');
+		s1.addParam('allowfullscreen','true');
+		s1.addParam('allowscriptaccess','always');
+		s1.addParam('flashvars','file=' + file_name + '&autostart=true&logo=images/euston_logo.jpg');
+		s1.write('preview');
+		
+		$("#mp3title").text("> Now playing: "+file_name);
+	}
+	</script>
+</head>
+
+<body margin-top="0px" margin-left="0px">
+
+<table width="100%">
+	<tr>
+		<td width="50%"/>
+		<td width="800px">
+			<table width="100%">
+				<tr>
+					<td colspan="2"><img src="images/header.jpg"/></td>
+				</tr>
+				<tr>
+					<td width="200px" height="100%" style="border-right:1px solid black;padding-right:10px;font-size:14px;" valign="top">
+						<ul>
+							<li><a href="index.html">Where to find us</a></li>
+							<li><a href="share_index.html">Listen to speakers</a></li>
+							<li><a href="the_12_steps.html">The 12 steps</a></li>
+						</ul>
+						<!--<p style="font-size:10px">
+							<a href="http://www.twitter.com/naeuston"><img src="http://twitter-badges.s3.amazonaws.com/follow_bird-a.png" alt="Follow naeuston on Twitter"/></a>
+							Follow us on Twitter and we'll let you know when new shares are up
+						</p>-->
+					</td>
+					<td width="100%">
+						<h2>Shares</h2>
+						<p>More shares coming soon! Please check back again.</p>
+						<p><ul>
+							<li>To <b>listen</b> to these shares, click the links.</li>
+							<li>To <b>download</b> these shares, right-click the links and select <b>Save link as...</b> in the menu.</li>
+							<li>To <b>play the mp3s in your browser</b> click the "play in browser" link and press play on the mp3 player that appears</li>
+						</ul></p>
+
+						<h3>What are the 12 steps?</h3>
+						<p>To download <b>How it Works</b>, with more information on the 12 steps, please <a href="http://www.na.org/?ID=litfiles/us_english/misc/How%20it%20Works.pdf">click here</a>.</p>
+
+						<p><a href="#player" name="player"></a></p>
+						<p id="preview"></p>
+						<p>&nbsp;&nbsp;<b style="color:red" id="mp3title"></b></p>
+
+						<table width="100%">
+							<tr>
+								<td valign="top" width="50%">
+									<h3>Step shares- female</h3>
+									<p>
+										<ul>
+											<li><a target="_blank" href="shares/Euston Andrea T Step 2 03-09-06.mp3">Step 2</a> Andrea T <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Andrea T Step 2 03-09-06.mp3')">Play in browser</a></li>
+											<li><a target="_blank" href="shares/Euston Susan F Step3 16-09-07.mp3">Step 3</a> Susan F <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Susan F Step3 16-09-07.mp3')">Play in browser</a></li>
+											<li><a target="_blank" href="shares/Euston Ayshea Step 4 14-12-08.mp3">Step 4</a> Ayshea <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Ayshea Step 4 14-12-08.mp3')">Play in browser</a></li>
+											<li><a target="_blank" href="shares/Euston Chrissie Step 5 20-06-09.mp3">Step 5</a> Chrissie <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Chrissie Step 5 20-06-09.mp3')">Play in browser</a></li>
+											<li><a target="_blank" href="shares/Euston Mary P Step 6 07-10-07.mp3">Step 6</a> Mary P <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Mary P Step 6 07-10-07.mp3')">Play in browser</a></li>
+											<li><a target="_blank" href="shares/Euston Sandra step 7 05-07-09.mp3">Step 7</a> Sandra <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Sandra step 7 05-07-09.mp3')">Play in browser</a></li>
+											<li><a target="_blank" href="shares/Euston Kari H Step 8 13-04-08.mp3">Step 8</a> Kari H <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Kari H Step 8 13-04-08.mp3')">Play in browser</a></li>
+											<li><a target="_blank" href="shares/Euston Layla Step 9.mp3">Step 9</a> Layla <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Layla Step 9.mp3')">Play in browser</a></li>
+											<li><a target="_blank" href="shares/Euston Linzie R Step 10 04-11-07.mp3">Step 10</a> Linzie R <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Linzie R Step 10 04-11-07.mp3')">Play in browser</a></li>
+											<li><a target="_blank" href="shares/Euston Ann Step 11 03-05-09.mp3">Step 11</a> Ann <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Ann Step 11 03-05-09.mp3')">Play in browser</a></li>
+											<li>...more shares to come...</li>
+										</ul>
+									</p>
+								</td>
+								<td valign="top" width="50%">
+								<h3>Step shares- male</h3>
+								<p>
+									<ul>
+										<li><a target="_blank" href="shares/Euston Archie C Step 1 17-05-09.mp3">Step 1</a> Archie C <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Archie C Step 1 17-05-09.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston Chris Step 2 24-08-08.mp3">Step 2</a> Chris F <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Chris Step 2 24-08-08.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston Chris Step 3 02-03-08.mp3">Step 3</a> Chris S <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Chris Step 3 02-03-08.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston David K Step 4 08-03-09.mp3">Step 4</a> David K <a href="#player" style="font-size:x-small" onclick="play('shares/Euston David K Step 4 08-03-09.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston Gary A Step 5 30-09-07.mp3">Step 5</a> Gary A <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Gary A Step 5 30-09-07.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston Radcliffe Step 6 15-07-07.mp3">Step 6</a> Radcliffe <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Radcliffe Step 6 15-07-07.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston Paul Step 7 06-04-08.mp3">Step 7</a> Paul <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Paul Step 7 06-04-08.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston Andre Step 8 21-10-07.mp3">Step 8</a> Andre <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Andre Step 8 21-10-07.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston Rob A Step 9 20-04-08.mp3">Step 9</a> Rob A <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Rob A Step 9 20-04-08.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston Michael P Step 9 19-10-08.mp3">Step 9</a> Michael P <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Michael P Step 9 19-10-08.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston John Step 9 20-01-08.mp3">Step 9</a> John <a href="#player" style="font-size:x-small" onclick="play('shares/Euston John Step 9 20-01-08.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston Paul S Step 10 25-01-09.mp3">Step 10</a> Paul S <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Paul S Step 10 25-01-09.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston Bill Step 10 20-05-07.mp3">Step 10</a> Bill <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Bill Step 10 20-05-07.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston Peter Step 11 02-08-09.mp3">Step 11</a> Peter <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Peter Step 11 02-08-09.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston George K Step 11 04-05-08.mp3">Step 11</a> George K <a href="#player" style="font-size:x-small" onclick="play('shares/Euston George K Step 11 04-05-08.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston James Step 12 08-02-2009.mp3">Step 12</a> James <a href="#player" style="font-size:x-small" onclick="play('shares/Euston James Step 12 08-02-2009.mp3')">Play in browser</a></li>
+										<li><a target="_blank" href="shares/Euston Vincent Step 12 10-05-09.mp3">Step 12</a> Vincent <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Vincent Step 12 10-05-09.mp3')">Play in browser</a></li>
+									</ul>
+								</p>
+							</td>
+						</tr>
+					</table>
+						<h3>Topic shares</h3>
+						<p>
+							<ul>
+								<li><a target="_blank" href="shares/Euston Frank Mc SPIRITUAL PROGRAMME 30-12-07.mp3">A spiritual programme</a> Frank Mc <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Frank Mc SPIRITUAL PROGRAMME 30-12-07.mp3')">Play in browser</a></li>
+								<li><a target="_blank" href="shares/Euston Anni TRADITION ONE UNITY 31-08-09.mp3">Tradition One: Unity</a> Anni <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Anni TRADITION ONE UNITY 31-08-09.mp3')">Play in browser</a></li>
+								<li><a target="_blank" href="shares/Euston Bill C THE MESSAGE 29-03-09.mp3">The message</a> Bill C <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Bill C THE MESSAGE 29-03-09.mp3')">Play in browser</a></li>
+								<li><a target="_blank" href="shares/Euston Nick M KEEP COMING BACK 29-06-08.mp3">Keep coming back</a> Nick M <a href="#player" style="font-size:x-small" onclick="play('shares/Euston Nick M KEEP COMING BACK 29-06-08.mp3')">Play in browser</a></li>
+								<li><a target="_blank" href="shares/Euston George A SERVICE 30-03-08.mp3">Service</a> George A <a href="#player" style="font-size:x-small" onclick="play('shares/Euston George A SERVICE 30-03-08.mp3')">Play in browser</a></li>
+							</ul>
+						</p>
+						<h2>Disclaimer</h2>
+						<p>Shares may contain offensive language and/or content.</p>
+
+						<h2>Clarification</h2>
+
+						<p>The views expressed by the sharers on this website are the opinions of individuals' interpretations of the NA 12 step programme and fellowship and do not represent NA as a whole.</p>
+
+						<p>There are a great number of addiction-related issues that others might expect a worldwide society of recovering drug addicts to take a postion on. Our answer, according to Tradition 10, is that our groups and our fellowship take no position, pro or con, on any issues except the NA programme itself. For our own survival, we have no opinion on outside issues.</p>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td width="50%"/>
+	</tr>
+</table>
+
+</body>
+</html>
