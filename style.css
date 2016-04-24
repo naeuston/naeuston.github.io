@@ -2,27 +2,18 @@ body
 {
 	padding:0px;
 	margin:0px;
-	font-family:Verdana,sans-serif;
-}
-#left_nav
-{
-	font-family:Verdana,sans-serif;
-	font-size:14px;
-	padding: 0px 20px 20px 20px;
-	border-right:1px solid black;
+	font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+	background-color: #FFFAFA;
 }
 #main_panel
 {
 	float:right;
 }
-#small
-{
-	font-size:10px;
-}
 p
 {
 	margin:0px;
-	padding:5px;
+	padding:0px;
+	font-size: 16pt;
 }
 img
 {
@@ -37,7 +28,10 @@ div
 }
 a
 {
-	font-family:Verdana,sans-serif;
+	font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+}
+a:visited {
+    color: blue;
 }
 table
 {
@@ -54,4 +48,13 @@ ul
 {
 	margin:0px;
 	padding-left:20px;
+	font-size: 16pt;
+}
+h1
+{
+	text-align:center;
+}
+h3
+{
+	padding: 0px;
 }
