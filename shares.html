@@ -1,0 +1,97 @@
+---
+# Do not remove this. This is a Jekyll "front matter" to prompt GitHub Pages's Jekyll template processor to
+# to evaluate this file for Liquid expressions.
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>NA Euston- shares</title>
+</head>
+
+<body margin-top="0px" margin-left="0px">
+
+<table width="100%">
+    <tr>
+        <td width="50%"/>
+        <td width="800px">
+            <table width="100%">
+                <tr>
+                    <td colspan="2"><img src="http://www.naeuston.org.uk/images/header.jpg"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1>
+                            <a href="index.html">The Meeting</a> |
+                            <a href="shares.html">Shares</a> |
+                            <a href="the_12_steps.html">About NA</a>
+                        </h1>
+                </tr>
+                <tr>
+                    <td width="100%">
+                        <p>
+                        <ul>
+                            <li>To <b>listen</b> to these shares, click the links.</li>
+                            <li>To <b>download</b> these shares on a computer, right-click the links and select <b>Save link as...</b> in the menu.</li>
+                        </ul>
+                        </p>
+                        <h2>Disclaimer</h2>
+                        <p>	Shares may contain offensive language and/or content. <br><br>
+                            The views expressed by the sharers on this website are the opinions of individuals' interpretations of the NA 12 step programme and fellowship. They do not represent NA as a whole.<br><br>
+                        </p>
+                        <h2>Shares on the Steps</h2>
+                        {% for step in (1..12) %}
+                            {% assign stepName = step | prepend: "step" %}
+                            <h3>Step {{ step }}</h3>
+                            <p>
+                                {% for share in site.data.shares[stepName] %}
+                                    {% assign link = share.link | strip %}
+                                    {% assign linkSchemeAndRest = link | split: ":" %}
+                                    {% assign linkScheme = linkSchemeAndRest[0] %}
+                                    {% assign speaker = share.speaker | strip %}
+                                    {% assign date = share.date | strip %}
+                                    {% if link contains "https://" %}
+                                        <a target="_blank" href="{{ link }}">{{ speaker | default: "Anonymous Speaker" }}</a> {{ date }}<br><br>
+                                    {% endif %}
+                                {% endfor %}
+                            </p>
+                        {% endfor %}
+                        <br>
+                        <h2>Topic Shares</h2>
+                        <p>
+                            {% for share in site.data.shares.topics %}
+                                {% assign link = share.link | strip %}
+                                {% assign linkSchemeAndRest = link | split: ":" %}
+                                {% assign linkScheme = linkSchemeAndRest[0] %}
+                                {% assign topic = share.topic | strip %}
+                                {% assign speaker = share.speaker | strip %}
+                                {% assign date = share.date | strip %}
+                                {% if linkScheme == "https" or linkScheme == "http" %}
+                                    <a target="_blank" href="{{ link }}">{{ topic | default: "Unknown Topic" }}</a> - {{ speaker | default: "Anonymous Speaker" }} {{ date }} <br><br>
+                                {% endif %}
+                            {% endfor %}
+                        <p>
+                        <h2>Readings from the Basic Text</h2>
+                        <p>
+                            {% assign readingsByStep = site.data.readings | group_by_exp:"reading", "reading.step" %}
+                            {% for step in readingsByStep %}
+                            <font size="5">Step {{ step.name }} Reading</font><br><br>
+                              {% for reading in step.items %}
+                                <a target="_blank" href="{{ reading.link }}"> {{ reading.date }}</a><br><br>
+                              {% endfor %}
+                            {% endfor %}
+                        </p>
+                        <br><br>
+                        <h2>Clarification</h2>
+                        <p>There are a great number of addiction-related issues that others might expect a worldwide society of recovering drug addicts to take a postion on. Our answer, according to our 10th tradition, is that our groups and our fellowship take no position, pro or con, on any issues except the NA programme itself. For our own survival, we have no opinion on outside issues.</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td width="50%"/>
+    </tr>
+</table>
+
+</body>
+</html>

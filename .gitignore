@@ -1,2 +1,6 @@
 **/.DS_Store
 .idea/**
+.jekyll-cache
+_site
+Gemfile*
+_config.yml
