@@ -1,0 +1,150 @@
+---
+# Do not remove this. This is a Jekyll "front matter" to prompt GitHub Pages's Jekyll template processor to
+# to evaluate this file for Liquid expressions.
+---
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NA Euston - Shares</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+              integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <img src="http://www.naeuston.org.uk/images/header.jpg" class="img-fluid"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">The Meeting</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/shares">Shares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/12steps">About NA</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="lead">
+                        Here are audio recordings from our many meetings over the years. They are provided here to share
+                        the experience, strength and hope of our members to as wide an audience as possible.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Each recording is:
+                    <ul>
+                        <li>Someone's sharing their experience on one of the 12 steps;</li>
+                        <li>Someone's sharing their experience around a topic related to recovery, the meeting or NA in general; or</li>
+                        <li>Someone reading from the Basic Text on a given step</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col alert alert-primary" role="alert">
+                    <h3>Disclaimer</h3>
+                    <p>
+                        Shares may contain offensive language and content.
+                    </p>
+                    <p>
+                        The views expressed by those sharing in these recordings are their own interpretations of the NA 12 step programme and fellowship.
+                        They do not represent NA as a whole.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    To use these recordings:
+                    <ul>
+                        <li>To <b>listen</b> , click the links.</li>
+                        <li>To <b>download</b> , click the links and on the next screen click the download button.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <h2>Shares on the Steps</h2>
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                            {% for step in (1..12) %}
+                                {% assign stepName = step | prepend: "step" %}
+                                <div class="col">
+                                    <h3>Step {{ step }}</h3>
+                                    <p>
+                                        {% for share in site.data.shares[stepName] %}
+                                            {% assign link = share.link | strip %}
+                                            {% assign linkSchemeAndRest = link | split: ":" %}
+                                            {% assign linkScheme = linkSchemeAndRest[0] %}
+                                            {% assign speaker = share.speaker | strip %}
+                                            {% assign date = share.date | strip %}
+                                            {% if link contains "https://" %}
+                                                <a target="_blank" href="{{ link }}">{{ speaker | default: "Anonymous Speaker" }}</a> {% if date != "" %}on {{ date }} {% endif %}<br>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <h2>Topic Shares</h2>
+                    <p>
+                        {% for share in site.data.shares.topics %}
+                            {% assign link = share.link | strip %}
+                            {% assign linkSchemeAndRest = link | split: ":" %}
+                            {% assign linkScheme = linkSchemeAndRest[0] %}
+                            {% assign topic = share.topic | strip %}
+                            {% assign speaker = share.speaker | strip %}
+                            {% assign date = share.date | strip %}
+                            {% if linkScheme == "https" or linkScheme == "http" %}
+                                <a target="_blank" href="{{ link }}">{{ topic | default: "Unknown Topic" }}</a> - by {{ speaker | default: "Anonymous Speaker" }} {% if date != "" %}on {{ date }} {% endif %} <br>
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <h2>Readings from the Basic Text</h2>
+                    <p>
+                        {% assign readingsByStep = site.data.readings | group_by_exp:"reading", "reading.step" %}
+                        {% for step in readingsByStep %}
+                          {% assign reading = step.items[0] %}
+                            {% assign link = reading.link | strip %}
+                            {% assign linkSchemeAndRest = link | split: ":" %}
+                            {% assign linkScheme = linkSchemeAndRest[0] %}
+                            {% assign date = reading.date | strip %}
+                            {% if linkScheme == "https" or linkScheme == "http" %}
+                                <a target="_blank" href="{{ link }}">Step {{ step.name }}</a>{% unless forloop.last %},{% endunless %}
+                                {% assign mod4 = forloop.index0 | modulo: 4 %}
+                                {% if mod4 == 3 %}
+                                    <br>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <h2>Clarification</h2>
+                    <p>There are a great number of addiction-related issues that others might expect a worldwide society of recovering drug addicts to take a postion on. Our answer, according to our 10th tradition, is that our groups and our fellowship take no position, pro or con, on any issues except the NA programme itself. For our own survival, we have no opinion on outside issues.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
