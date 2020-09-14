@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col text-center">
+        <img src="http://www.naeuston.org.uk/images/header.jpg" class="img-fluid"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        {% assign page = include.page %}
+        {{page}}
+        {% if page == 'main' %}
+            {% assign mainmenu = 'active' %}
+        {% elsif page == 'shares' %}
+            {% assign sharesmenu = 'active' %}
+        {% elsif page == 'aboutna' %}
+            {% assign aboutnamenu = 'active' %}
+        {% endif %}
+
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link {{ mainmenu }}" href="/">The Meeting</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ sharesmenu }}" href="/shares">Shares</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ aboutnamenu }}" href="/na">About NA</a>
+            </li>
+        </ul>
+    </div>
+</div>

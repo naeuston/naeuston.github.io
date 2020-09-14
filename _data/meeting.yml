@@ -1,0 +1,60 @@
+# any special notice we want to display about the meeting e.g. physical meeting closed because of Covid
+notice:
+  # replace true with false if you do not wish to display a message
+  show: true
+  # the (possibly multi-line) message to display
+  message:
+  - In light of the COVID-19 pandemic, the Euston meeting has switched to an online-only format as described below.
+  - Please do not go to our old location near Euston station - this location is closed for the foreseeable future.
+
+# what to display for the day and time of the meeting
+when: Every Sunday at 11:00am London Time
+# what to display for the duration of the meeting
+duration: 1hr 30m
+# a description of the format of the meeting
+format:
+  - This is a step meeting, alternating between a step reading and step share each week. If there is a fifth Sunday in the month, there is a topic share.
+  - It is a closed meeting for addicts only but can be opened for non-addicts upon request. Non-addicts are asked not to share.
+  - Sharing time is limited to 3 minutes and please be aware this is a large meeting so not everyone may get a chance to share.
+# where the meeting is held - either on zoom or in a physical meeting. Setting it to zoom will show zoom details,
+# setting it to physical will show physical meeting details
+where: zoom
+
+# info about the two different meeting locations - online and physical
+locations:
+  # info about the Zoom meeting when it is hosted that way
+  zoom:
+    # the Zoom link to display
+    link: https://zoom.us/j/271542518
+    # the Zoom password to display
+    password: 1234
+    # instructions to show for joining the Zoom meeting
+    join-info:
+      - To join our Zoom meeting, click the above Zoom link and enter the password above if required.
+      - For the sake of anonymity we recommend you do not use your full name when joining the meeting.
+      - It is the conscience of the group that you must enable your PC webcam or mobile phone camera for the duration of the meeting.
+      - This is for the safety and protection of the group and so that nobody is special or different.
+      - The Zoom software/apps work on most PC/Mac computers, most smart phones and most tablets.
+      - If this is your first time using Zoom, you may wish to give yourself extra time to install it and familiarise yourself with its operation.
+
+  # info about the physical location of the meeting when it is hosted that way
+  physical:
+    address:
+      - St. Pancras Church Hall
+      - Lancing Street (off Eversholt Street)
+      - Euston, London
+      - NW1 1NA
+    # the Google map location for the meeting suitable for embedding in the website
+    map:
+      links:
+        # a link to the physical meeting location on Google Maps
+        full: https://www.google.com/maps/place/Lancing+St,+Somers+Town,+London/@51.5284466,-0.1318712,18.09z/data=!4m5!3m4!1s0x48761b24fb774bfd:0xd3f5cfe8602374c6!8m2!3d51.5285931!4d-0.1313451?hl=en
+        # a link to the physical meeting location on Google Maps suitable for embedding on the main page
+        embedded: https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19854.375155298963!2d-0.127201!3d51.535285!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b24fb774bfd%3A0xd3f5cfe8602374c6!2sLancing%20St%2C%20Somers%20Town%2C%20London%20NW1%201NA!5e0!3m2!1sen!2suk!4v1600082969505!5m2!1sen!2suk
+    # instructions to help those joining the physical meeting to find it and any restrictions there might be
+    join-info:
+      - The closest train stations are Euston (Best) and King's Cross.
+      - Bus routes that service the location include 10,18,30,59,68,73,91,168,205.
+      - Children are welcome.
+      - Animals and smoking are not permitted, by decree of the landlord.
+      - Unfortunately the location is not wheelchair-accessibile.
