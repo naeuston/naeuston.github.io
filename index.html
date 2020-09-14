@@ -25,10 +25,12 @@
                     {% if shownotice %}
                         <div class="alert alert-primary" role="alert">
                             <h3>Important Notice</h3>
-                            {% assign notice = site.data.meeting.notice.message %}
-                            {% for line in notice %}
-                                {{ line | strip_html }}<br/>
-                            {% endfor %}
+                            <p>
+                                {% assign notice = site.data.meeting.notice.message %}
+                                {% for line in notice %}
+                                    {{ line | strip_html }}<br/>
+                                {% endfor %}
+                            </p>
                         </div>
                         <br>
                     {% endif %}

@@ -23,3 +23,7 @@ body {
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
+
+p {
+    line-height: 1.75;
+}
