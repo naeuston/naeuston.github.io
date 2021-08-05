@@ -1,7 +1,7 @@
 # any special notice we want to display about the meeting e.g. physical meeting closed because of Covid
 notice:
   # replace true with false if you do not wish to display a message
-  show: true
+  show: false
   # the (possibly multi-line) message to display
   message:
   - In light of the COVID-19 pandemic, the Euston meeting has switched to an online-only format as described below.
@@ -18,7 +18,7 @@ format:
   - Sharing time is limited to 3 minutes and please be aware this is a large meeting so not everyone may get a chance to share.
 # where the meeting is held - either on zoom or in a physical meeting. Setting it to zoom will show zoom details,
 # setting it to physical will show physical meeting details
-where: zoom
+where: physical
 
 # info about the two different meeting locations - online and physical
 locations:
